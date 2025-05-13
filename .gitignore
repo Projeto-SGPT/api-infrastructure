@@ -12,6 +12,7 @@ out/
 .gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
+gradle.properties
 
 # Arquivos de log
 *.log
