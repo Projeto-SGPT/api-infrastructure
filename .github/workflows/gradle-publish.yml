@@ -13,6 +13,10 @@ jobs:
       contents: read
       packages: write
 
+    env:
+      USERNAME: ${{ github.actor }}
+      TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - uses: actions/checkout@v4
 
@@ -42,6 +46,3 @@ jobs:
 
       - name: Publish to GitHub Packages
         run: ./gradlew publish
-        env:
-          USERNAME: ${{ github.actor }}
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
