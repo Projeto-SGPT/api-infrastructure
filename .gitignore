@@ -11,7 +11,14 @@ out/
 # Gradle
 .gradle/
 build/
+
+# Permitir Gradle Wrapper (essencial para builds em CI/CD)
+!gradlew
+!gradlew.bat
+!gradle/wrapper/
+!gradle/wrapper/gradle-wrapper.properties
 !gradle/wrapper/gradle-wrapper.jar
+
 gradle.properties
 
 # Arquivos de log
