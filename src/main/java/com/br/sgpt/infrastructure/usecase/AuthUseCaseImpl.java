@@ -36,7 +36,7 @@ public class AuthUseCaseImpl implements AuthUseCase {
 
     @Override
     public void register(String username, String password, String email, String role) {
-        String encoded = passwordEncoder.encode(password);
+        String encoded = this.passwordEncoder.encode(password);
 
         this.userRepository.save(new User(UUID.randomUUID(), username, encoded, email, role));
     }

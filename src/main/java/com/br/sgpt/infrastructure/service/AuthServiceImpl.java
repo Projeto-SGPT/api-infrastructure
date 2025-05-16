@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.UUID;
 
 @Service
-public class JwtService implements AuthService {
+public class AuthServiceImpl implements AuthService {
 
     private static final String SECRET = "gPz+QGecY1WcULNjdME+5mMfdOqUNPiDhmuQzXjR6qw="; // Base64 (>= 256 bits)
     private static final SecretKey SIGNING_KEY = Keys.hmacShaKeyFor(Base64.getDecoder().decode(SECRET));

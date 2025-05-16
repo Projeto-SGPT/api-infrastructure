@@ -1,5 +1,6 @@
 import com.br.sgpt.domain.entity.User;
-import com.br.sgpt.infrastructure.service.JwtService;
+import com.br.sgpt.domain.services.AuthService;
+import com.br.sgpt.infrastructure.service.AuthServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,11 +11,11 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class JwtServiceTest {
 
-    private JwtService jwtService;
+    private AuthService jwtService;
 
     @BeforeEach
     void setUp() {
-        this.jwtService = new JwtService();
+        this.jwtService = new AuthServiceImpl();
     }
 
     @Test
